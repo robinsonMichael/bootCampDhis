@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USER API </title>
+        <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/semantic.min.js"></script>
+        <script type="text/javascript" src="js/apiClient.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    </head>
+    
+    <body onload="getUsers(1)" id ="body">
+        
+        <h1 class="ui center aligned header">BOOTCAMP 2016</h1>
+
+
+        <h2 class="ui center aligned header">DHIS2 Users</h2>
+     
+        <div class="ui center container">
+        <div class="ui segments">
+            <div class="ui segment">
+                <table id="datatable" class="ui sortable celled green table">
+                    <thead>
+                      <tr>
+                        <th >USERNAME</th>
+                        <th >USER ID</th>
+                        <th >CREATED</th>
+                        <th >LAST UPDATED</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button id="prev"> previous Page</button>
+                <button id="next"> next Page </button>
+            </div>
+            <div id="ajax_loader" class="ui active dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui indeterminate text loader">Loading data</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+        
+      <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+          User Profile
+        </div>
+        <div class="description" id="userDesc"></div>
+        <div class="actions">
+          <div class="ui red deny button">
+            close
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
